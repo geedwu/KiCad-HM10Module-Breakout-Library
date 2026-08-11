@@ -39,6 +39,10 @@ According to Huamao official customer service, they currently produce two differ
 | **Pinout:** `VCC`, `GND`, `TXD`, `RXD`, `GND`, `3V0_OUT` | **Pinout:** `KEY`, `RXD`, `TXD`, `GND`, `VCC`, `LED` |
 | *We did NOT draw the symbol for this version.* | *This library ONLY includes the symbol for this `KEY...LED` variant.* |
 
+### 📏 Footprint Design & Dimensions
+To ensure maximum compatibility across different manufacturers, the physical `.kicad_mod` footprint was designed using a **"max envelope"** approach for the outline. 
+By referencing the board dimensions of the Mouser/Soldered version (43 x 16 mm) and the Electrokit version (40.5 x 16.7 mm), the final footprint outline is sized at **43 x 17 mm**. This guarantees that the silkscreen and courtyard will safely accommodate the slightly varying physical sizes of these modules on your PCB.
+
 ---
 
 ## ⚠️ Other Market Variants (Requires Modification)
@@ -64,3 +68,7 @@ This library was heavily modified and perfected over several iterations to solve
 ## 📚 References
 For a deep dive into the HM-10 variant chaos, check out Martyn Currey's excellent breakdown:
 [HM-10 Bluetooth 4 BLE Modules](http://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/)
+
+---
+### 🔍 Search Keywords (SEO)
+KicadHM10Library, Kicad HM10, HM-10 KiCad, HM10 Breakout KiCad, ZS-040 KiCad, Huamao HM-10 KiCad symbol footprint, AT-09 KiCad, BLE KiCad library.

@@ -21,7 +21,7 @@ This matches the classic generic blue board (often with "ZS-040" printed on the 
 * **Pinout (1 to 6):** `STATE`, `RXD`, `TXD`, `GND`, `VCC`, `EN`
 * **Datasheet:** [Mouser ZS-040 Specsheet](https://www.mouser.com/catalog/specsheets/Soldered_101685%20bluetooth%20module%20hm%2010%20ble%2040.pdf)
 * **Reference Store:** [Mouser Product 101685](https://www.mouser.com/ProductDetail/Soldered/101685)
-* **Important Context:** The original ZS-040 breakout board is largely discontinued. Most modules you buy online today with this footprint are actually cheap AT-09 clones. However, this `HM-10Module_ZS040` schematic symbol is designed to be fully backward compatible with these generic ZS-040/AT-09 clones.
+* **Important Context & AT-09 Disclaimer:** The original ZS-040 breakout board is largely discontinued. Most modules you buy online today with this footprint are actually cheap AT-09 clones. While this `HM-10Module_ZS040` schematic symbol is designed to be fully backward compatible with *most* generic ZS-040/AT-09 clones, the market is highly unstandardized. **Disclaimer: Some AT-09 clones have completely different pin orders (especially `VCC` and `GND`). ALWAYS verify your specific board's silkscreen before designing your PCB to avoid short circuits!**
 
 ### 2. `HM-10Module_Huamao_Original` (Official Manufacturer Variant)
 This matches the official breakout boards shipped directly from the original manufacturer, Jinan Huamao (jnhuamao.cn).

@@ -66,5 +66,6 @@ This library was heavily modified and perfected over several iterations to solve
 * **Final Version (This Library):** The symbols, pin mappings, and electrical rules were completely overhauled from scratch to create this foolproof, dual-variant library specifically tailored for HM-10 breakout boards.
 
 ## 📚 References
-For a deep dive into the HM-10 variant chaos, check out Martyn Currey's excellent breakdown:
-[HM-10 Bluetooth 4 BLE Modules](http://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/)
+* **Jinan Huamao Official Website:** [http://www.jnhuamao.cn/](http://www.jnhuamao.cn/)
+  This is the URL printed directly on the silkscreen of official modules. Since the manufacturer frequently updates their firmware versions and AT command manuals (which causes direct PDF links to break over time), checking their official homepage is the most reliable way to find the latest documentation.
+* **Deep Dive into HM-10 Variants:** For a comprehensive breakdown of the HM-10 variant chaos, check out Martyn Currey's excellent article: [HM-10 Bluetooth 4 BLE Modules](http://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/)

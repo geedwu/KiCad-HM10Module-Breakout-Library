@@ -4,6 +4,16 @@ The HM-10 Bluetooth BLE module market is quite messy. If you buy a breakout boar
 
 Using the wrong symbol can cause your logic to fail, or worse, damage your MCU's IO ports! I created this KiCad symbol library to include verified variants so you don't burn your board.
 
+## 💡 Origin & Motivation
+This library was born out of necessity while following the excellent KiCad tutorial video: **[Lab #1.a) - How to create a schematic diagram in KiCad](https://www.youtube.com/watch?v=EVtMQmhW2Ng)**. 
+
+During the tutorial, it became apparent that while standard libraries exist for bare chips, there were **no suitable schematic symbols and matching footprints for the actual 6-pin HM-10 breakout modules** used in real-world projects. I decided to draw my own robust library to solve this exact problem.
+
+*For additional context on how to wire and interface with these modules, see this referenced guide:*
+📘 **[HM-10 Bluetooth 4.0 BLE Module Tutorial (PDF)](https://engineering.fresnostate.edu/research/bulldogmote/documents/11.%20HM10%20BLE_FTDI.pdf)**
+
+---
+
 ## 📦 Symbols Included in this Library
 
 ### 1. `HM-10Module_ZS040` (Standard Variant)
@@ -53,4 +63,4 @@ This library was heavily modified and perfected over several iterations to solve
 
 ## 📚 References
 For a deep dive into the HM-10 variant chaos, check out Martyn Currey's excellent breakdown:
-[HM-10 Bluetooth 4 BLE Modules](http://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/).
+[HM-10 Bluetooth 4 BLE Modules](http://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/)

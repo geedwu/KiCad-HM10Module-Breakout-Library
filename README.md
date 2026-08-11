@@ -18,6 +18,7 @@ This matches the official breakout boards shipped directly from the original man
 * **Pinout (1 to 6):** `KEY`, `RXD`, `TXD`, `GND`, `VCC`, `LED`
 * **Warning:** Notice that Pin 1 and Pin 6 are completely reversed in function compared to the ZS-040! 
 * **Official Store Link:** [Taobao Item 667765812144](https://item.taobao.com/item.htm?id=667765812144)
+* **⚠️ Footprint Verification Note:** Please note that the physical 6-pin footprint (`.kicad_mod`) included in this library has **ONLY been physically verified to fit the ZS-040 variant**. While the schematic symbol for this Huamao variant is electrically correct, its mechanical fitment with the physical Huamao board is currently unverified. Verify dimensions before fabricating your PCB!
 
 #### 🔍 Manufacturer Board Variations
 According to Huamao official customer service, they currently produce two different 6-pin layouts. **Please look closely at the images below:**
@@ -43,7 +44,7 @@ According to Huamao official customer service, they currently produce two differ
 This library was heavily modified and perfected over several iterations to solve real-world pinout issues. I would like to acknowledge the open-source projects that inspired earlier drafts:
 
 * **First Draft Inspiration:** Originally referenced the [hm10-kicad library by dylankbuckley](https://github.com/dylankbuckley/hm10-kicad). 
-  * *Why we moved on:* That library features a simplified 4-pin layout (GND, VCC, RX, TX). While functionally minimal, it does not physically match the standard 6-pin headers on real-world breakout boards, which can lead to footprint misalignment and potential short circuits for beginners.
+  * *Why we moved on:* That library features a simplified 4-pin layout (GND, VCC, RX, TX), meaning it **completely misses crucial control pins**. Furthermore, its **pin numbering does not match** the physical 6-pin headers found on real-world breakout boards. Attempting to use it directly on a standard 6-pin board would lead to severe footprint misalignment and potential short circuits.
 
 * **Second Draft Inspiration:** The 6-pin physical footprint was initially adapted from the generic HC-05 symbol found in the [KiCad-Simple-Libraries by Sajitha-Aldeniya](https://github.com/Sajitha-Aldeniya/KiCad-Simple-Libraries). 
   * *Why we moved on:* Although the 6-pin footprint is mechanically identical, the standard HC-05 pin definitions and electrical types do not accurately reflect the specific variants of the HM-10 (especially the Huamao KEY/LED variant). 
@@ -52,4 +53,4 @@ This library was heavily modified and perfected over several iterations to solve
 
 ## 📚 References
 For a deep dive into the HM-10 variant chaos, check out Martyn Currey's excellent breakdown:
-[HM-10 Bluetooth 4 BLE Modules](http://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/)
+[HM-10 Bluetooth 4 BLE Modules](http://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/).

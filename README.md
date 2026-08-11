@@ -68,7 +68,3 @@ This library was heavily modified and perfected over several iterations to solve
 ## 📚 References
 For a deep dive into the HM-10 variant chaos, check out Martyn Currey's excellent breakdown:
 [HM-10 Bluetooth 4 BLE Modules](http://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/)
-
----
-### 🔍 Search Keywords (SEO)
-KicadHM10Library, Kicad HM10, HM-10 KiCad, HM10 Breakout KiCad, ZS-040 KiCad, Huamao HM-10 KiCad symbol footprint, AT-09 KiCad, BLE KiCad library.

@@ -1,2 +1,55 @@
-# KiCad-HM10Module-Breakout-Library
-A robust KiCad symbol library for HM-10 BLE module breakout boards, featuring strict pinout mappings for both ZS-040 and Huamao variants to prevent hardware damage.
+# KiCad HM-10 Breakout Boards Library 📶
+
+The HM-10 Bluetooth BLE module market is quite messy. If you buy a breakout board (usually with 6 pins), there are **various common variants** with completely reversed control pins or different layouts. 
+
+Using the wrong symbol can cause your logic to fail, or worse, damage your MCU's IO ports! I created this KiCad symbol library to include verified variants so you don't burn your board.
+
+## 📦 Symbols Included in this Library
+
+### 1. `HM-10Module_ZS040` (Standard Variant)
+This matches the classic generic blue board (often with "ZS-040" printed on the back). 
+* **Pinout (1 to 6):** `STATE`, `RXD`, `TXD`, `GND`, `VCC`, `EN`
+* **Datasheet:** [Mouser ZS-040 Specsheet](https://www.mouser.com/catalog/specsheets/Soldered_101685%20bluetooth%20module%20hm%2010%20ble%2040.pdf)
+* **Reference Store:** [Mouser Product 101685](https://www.mouser.com/ProductDetail/Soldered/101685)
+* **Important Context:** The original ZS-040 breakout board is largely discontinued. Most modules you buy online today with this footprint are actually cheap AT-09 clones. However, this `HM-10Module_ZS040` schematic symbol is designed to be fully backward compatible with these generic ZS-040/AT-09 clones.
+
+### 2. `HM-10Module_Huamao_Original` (Official Manufacturer Variant)
+This matches the official breakout boards shipped directly from the original manufacturer, Jinan Huamao (jnhuamao.cn).
+* **Pinout (1 to 6):** `KEY`, `RXD`, `TXD`, `GND`, `VCC`, `LED`
+* **Warning:** Notice that Pin 1 and Pin 6 are completely reversed in function compared to the ZS-040! 
+* **Official Store Link:** [Taobao Item 667765812144](https://item.taobao.com/item.htm?id=667765812144)
+
+#### 🔍 Manufacturer Board Variations
+According to Huamao official customer service, they currently produce two different 6-pin layouts. **Please look closely at the images below:**
+
+| ❌ Unsupported Layout | ✅ Supported Layout (This Symbol) |
+| :---: | :---: |
+| <img src="image_b9f839.png" width="300"> | <img src="image_b9f818.jpg" width="300"> |
+| **Pinout:** `VCC`, `GND`, `TXD`, `RXD`, `GND`, `3V0_OUT` | **Pinout:** `KEY`, `RXD`, `TXD`, `GND`, `VCC`, `LED` |
+| *We did NOT draw the symbol for this version.* | *This library ONLY includes the symbol for this `KEY...LED` variant.* |
+
+---
+
+## ⚠️ Other Market Variants (Requires Modification)
+
+### Electrokit Variant
+* **Reference Link:** [Electrokit HM-10 BLE 4.0](https://www.electrokit.com/en/bluetoothmodul-hm-10-ble-4.0)
+* **Warning:** If you are using the Electrokit variant, **do not use the standard symbols in this library directly**. You will need to manually modify the pinout in your schematic, as its layout differs from both the ZS-040 and Huamao originals.
+
+---
+
+## 🤝 Acknowledgments & Evolution 
+
+This library was heavily modified and perfected over several iterations to solve real-world pinout issues. I would like to acknowledge the open-source projects that inspired earlier drafts:
+
+* **First Draft Inspiration:** Originally referenced the [hm10-kicad library by dylankbuckley](https://github.com/dylankbuckley/hm10-kicad). 
+  * *Why we moved on:* That library features a simplified 4-pin layout (GND, VCC, RX, TX). While functionally minimal, it does not physically match the standard 6-pin headers on real-world breakout boards, which can lead to footprint misalignment and potential short circuits for beginners.
+
+* **Second Draft Inspiration:** The 6-pin physical footprint was initially adapted from the generic HC-05 symbol found in the [KiCad-Simple-Libraries by Sajitha-Aldeniya](https://github.com/Sajitha-Aldeniya/KiCad-Simple-Libraries). 
+  * *Why we moved on:* Although the 6-pin footprint is mechanically identical, the standard HC-05 pin definitions and electrical types do not accurately reflect the specific variants of the HM-10 (especially the Huamao KEY/LED variant). 
+
+* **Final Version (This Library):** The symbols, pin mappings, and electrical rules were completely overhauled from scratch to create this foolproof, dual-variant library specifically tailored for HM-10 breakout boards.
+
+## 📚 References
+For a deep dive into the HM-10 variant chaos, check out Martyn Currey's excellent breakdown:
+[HM-10 Bluetooth 4 BLE Modules](http://www.martyncurrey.com/hm-10-bluetooth-4ble-modules/)
